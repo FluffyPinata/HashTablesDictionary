@@ -7,6 +7,7 @@
 class Dictionary {
 private:
 	std::list<std::string> wordList[1373];
+	int totalWords;
 public:
 	Dictionary();
 	void readWords();
