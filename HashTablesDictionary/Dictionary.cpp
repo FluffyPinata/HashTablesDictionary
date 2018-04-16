@@ -36,6 +36,7 @@ void Dictionary::checkFile() {
 		tempList = wordList[wordIntHash];
 		for (it = tempList.begin(); it != tempList.end(); it++) {
 			if (*it == line) {
+				std::cout << *it << std::endl;
 				correctWords += 1;
 			}
 		}
@@ -50,7 +51,7 @@ std::string Dictionary::strip(std::string stringToStrip) {
 	int charToCheck = stringToStrip[counter];
 	std::string goodString = "";
 	//remove garbage from front of the word
-	while (!((charToCheck > 96 && charToCheck < 123) || (charToCheck > 64 && charToCheck < 91))) { //a-z and A-Z
+	while (!((charToCheck > 96 && charToCheck < 123) || (charToCheck > 64 && charToCheck < 91) || (charToCheck > 47 && charToCheck < 58))) { //a-z and A-Z and 0-9
 		stringToStrip[counter] = ' ';
 		counter++;
 		charToCheck = stringToStrip[counter];
@@ -58,7 +59,7 @@ std::string Dictionary::strip(std::string stringToStrip) {
 	//remove garbage from the end of the word
 	counter = stringToStrip.size()-1;
 	charToCheck = stringToStrip[counter];
-	while (!((charToCheck > 96 && charToCheck < 123) || (charToCheck > 64 && charToCheck < 91))) { //a-z and A-Z
+	while (!((charToCheck > 96 && charToCheck < 123) || (charToCheck > 64 && charToCheck < 91) || (charToCheck > 47 && charToCheck < 58))) { //a-z and A-Z and 0-9
 		stringToStrip[counter] = ' ';
 		counter--;
 		charToCheck = stringToStrip[counter];
