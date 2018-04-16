@@ -9,6 +9,7 @@ private:
 	std::list<std::string> wordList[1373];
 public:
 	Dictionary();
+	void readWords();
 };
 
 #endif
