@@ -17,3 +17,39 @@ void Dictionary::readWords() {
 	}
 	infile.close();
 }
+
+void Dictionary::checkFile() {
+	std::string fileToCheck;
+	std::cout << "What file would you like to check for spelling mistakes?" << std::endl;
+	getline(std::cin, fileToCheck);
+}
+
+std::string Dictionary::strip(std::string stringToStrip) {
+	int counter = 0;
+	int charToCheck = stringToStrip[counter];
+	std::string goodString = "";
+	//remove garbage from front of the word
+	while (!((charToCheck > 96 && charToCheck < 123) || (charToCheck > 64 && charToCheck < 91))) { //a-z and A-Z
+		stringToStrip[counter] = ' ';
+		counter++;
+		charToCheck = stringToStrip[counter];
+	}
+	//remove garbage from the end of the word
+	counter = stringToStrip.size()-1;
+	charToCheck = stringToStrip[counter];
+	while (!((charToCheck > 96 && charToCheck < 123) || (charToCheck > 64 && charToCheck < 91))) { //a-z and A-Z
+		stringToStrip[counter] = ' ';
+		counter--;
+		charToCheck = stringToStrip[counter];
+	}
+
+	for (int i = 0; i < stringToStrip.size(); i++) { //This loop will remove all the whitespace from the ends of the string by just adding letter characters
+		charToCheck = stringToStrip[i];
+		if ((charToCheck > 96 && charToCheck < 123) || (charToCheck > 64 && charToCheck < 91)) {
+			goodString += stringToStrip[i];
+		}
+	}
+
+	return goodString;
+	
+}

@@ -10,6 +10,8 @@ private:
 public:
 	Dictionary();
 	void readWords();
+	void checkFile();
+	std::string strip(std::string stringToStrip);
 };
 
 #endif

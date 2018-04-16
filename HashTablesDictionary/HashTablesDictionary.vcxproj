@@ -151,6 +151,7 @@
     <ClCompile Include="HashTablesDictionary.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="check.txt" />
     <Text Include="dict.txt" />
   </ItemGroup>
   <ItemGroup>

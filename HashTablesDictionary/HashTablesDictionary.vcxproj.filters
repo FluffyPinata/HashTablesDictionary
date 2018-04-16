@@ -26,6 +26,9 @@
     <Text Include="dict.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="check.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dictionary.h">
