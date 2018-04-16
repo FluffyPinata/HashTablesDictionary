@@ -1,6 +1,8 @@
 #ifndef DICTIONARY_H
 #define DICTIONARY_H
 
+//Created by Gabriel Jones
+
 #include <list>
 #include <string>
 
